@@ -5,6 +5,7 @@ import (
 	bc "github.com/amazingtensor/gogoduck/blockchain"
 	"log"
 	"net/http"
+	"os"
 )
 
 func simulate(w http.ResponseWriter, r *http.Request) {
@@ -36,7 +37,8 @@ func simulate(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
 	http.HandleFunc("/", simulate)
-	fmt.Println("Running server on localhost:3000")
-	log.Fatal(http.ListenAndServe(":3000",nil))
+	fmt.Println("Running server!")
+	log.Fatal(http.ListenAndServe(":"+port,nil))
 }
