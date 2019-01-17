@@ -1,12 +1,12 @@
 # gogoduck
-Super simple blockchain with Go language.
+Super --simple-- simplistic blockchain with Go language.
 
 The Block data structure holds
 i) data about the current transaction
 ii) the SHA256 hash of the previous block
 iii) a SHA256 hash computation of current data hash and the previous block's hash
 
-The simulation starts with a genesis transaction and block. After each subsequent transaction, the blockchain will be printed.
+The simulation starts with a genesis transaction and block. After each subsequent transaction, the blockchain will be printed. While not yet interesting, you can see the app simulate [here](https://aqueous-woodland-76925.herokuapp.com/)
 
 ```
 ----Transactions to be run----
